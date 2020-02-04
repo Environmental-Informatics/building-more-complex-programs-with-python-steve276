@@ -5,7 +5,7 @@ Created on Mon Feb  3 19:25:09 2020
 Miriam Stevens
 @author: steve276
 
-BE65100 - ThinkPython - Excercise 7.1
+ABE65100 - ThinkPython - Excercise 7.1
 
 This program uses 'while True' and 'for loop' iteration to compare Newton's 
 square root algorithm with the square root function in the math module.
@@ -37,7 +37,7 @@ def prt_header():
     
 def mysqrt(a):
     a = float(a)
-    x = .625*a                   #reasonable value of x required by in prompt
+    x = .625*a                                 #reasonable value of x required by in prompt
     epsilon = 0.0000001
     while True:
         alg = (x + a/x) / 2
@@ -47,14 +47,14 @@ def mysqrt(a):
         x = alg
             
     math_alg = math.sqrt(a)
-    diff = abs(alg - math_alg)   # abs of difference between squrt calculations
-    print(a, end =" ")                     #prints base value for taking sqrt
-    print('%.7f'%alg, "   ", end =" ")     #prints newton's sqrt algorithm
-    print('%.7f'%math_alg, "   ", end =" ")  #prints sqrt calculation from math
+    diff = abs(alg - math_alg)                 # abs of difference between squrt calculations
+    print(a, end =" ")                         #prints base value for taking sqrt
+    print('%.7f'%alg, "   ", end =" ")         #prints newton's sqrt algorithm
+    print('%.7f'%math_alg, "   ", end =" ")    #prints sqrt calculation from math
     print(diff)    
     
 def test_square_root():
     prt_header()
-    for a in range (1, 10):                #iterate 9 times for a={1-9}
+    for a in range (1, 10):                     #iterate 9 times for a={1-9}
         mysqrt(a)
  
